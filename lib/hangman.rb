@@ -54,11 +54,12 @@ class Hangman
     Dir.mkdir('saved_gamefile') unless Dir.exist?('saved_gamefile')
     print "\nInput a name for your saved file: "
     filename = gets.chomp
+    filename = filename.strip.gsub(' ','_')
     until !File.exist?("saved_gamefile/#{filename}.json")
       puts "\nSorry, this file already exist, input another name.".red
       filename = gets.chomp
+      filename = filename.strip.gsub(' ','_')
     end
-    filename = filename.strip.gsub(' ','_')
     saved_gamefile = File.open("saved_gamefile/#{filename}.json","w")
     saved_gamefile.write(json)
     puts "Game Saved Successfully!".green
