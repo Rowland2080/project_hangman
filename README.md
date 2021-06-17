@@ -9,7 +9,7 @@ At the beginning of the game, a word is chosen at random from a selected file. T
 OR
 * When the number of guesses has been exhausted and the secret word hasn't been found in which case the player hangs.
 
-**The aim of the game is to guess The Hangman's secret word before running of guesses**
+**The aim of the game is to guess The Hangman's secret word before running out of guesses**
 
 #### Serialization
 
